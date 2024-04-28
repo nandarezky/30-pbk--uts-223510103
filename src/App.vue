@@ -50,23 +50,23 @@ onMounted(() => {
 		
 		<section class="greeting">
 			<h2 class="title">
-				What's up, <input type="text" id="name" placeholder="Name here" v-model="name">
+				Assalamualaikum, <input type="text" id="name" placeholder="Tulis Nama" v-model="name">
 			</h2>
 		</section>
 
 		<section class="create-todo">
-			<h3>CREATE A TODO</h3>
+			<h3>KEGIATAN HARI INI</h3>
 
 			<form id="new-todo-form" @submit.prevent="addTodo">
-				<h4>What's on your todo list?</h4>
+				<h4>Apa yang akan kamu lakukan hari ini?</h4>
 				<input 
 					type="text" 
 					name="content" 
 					id="content" 
-					placeholder="e.g. make a video"
+					placeholder="Tulis kegiatan kamu hari ini"
 					v-model="input_content" />
 				
-				<h4>Pick a category</h4>
+				<h4>Pilih warna agar menarik</h4>
 				<div class="options">
 
 					<label>
@@ -77,7 +77,7 @@ onMounted(() => {
 							value="business"
 							v-model="input_category" />
 						<span class="bubble business"></span>
-						<div>Business</div>
+						<div></div>
 					</label>
 
 					<label>
@@ -88,17 +88,17 @@ onMounted(() => {
 							value="personal"
 							v-model="input_category" />
 						<span class="bubble personal"></span>
-						<div>Personal</div>
+						<div></div>
 					</label>
 
 				</div>
 
-				<input type="submit" value="Add todo" />
+				<input type="submit" value="Tambahkan" />
 			</form>
 		</section>
 
 		<section class="todo-list">
-			<h3>TODO LIST</h3>
+			<h3>Kegiatan kamu</h3>
 			<div class="list" id="todo-list">
 
 				<div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
@@ -116,7 +116,7 @@ onMounted(() => {
 					</div>
 
 					<div class="actions">
-						<button class="delete" @click="removeTodo(todo)">Delete</button>
+						<button class="delete" @click="removeTodo(todo)">Hapus</button>
 					</div>
 				</div>
 
