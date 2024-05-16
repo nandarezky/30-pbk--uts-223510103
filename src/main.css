@@ -101,6 +101,28 @@ h4 {
 	box-shadow: var(--shadow);
 	cursor: pointer;
 }
+.header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #070707;
+}
+
+.header nav ul li.active {
+    font-weight: bold;
+	
+	
+}
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -118,9 +140,18 @@ input[type="checkbox"] {
 	box-shadow: var(--business-glow);
 }
 
+.post-section {
+	border: 2px solid var(--business);
+	box-shadow: var(--personal-glow);
+	
+
+}
+
+
 .bubble.personal {
 	border-color: var(--personal);
 	box-shadow: var(--personal-glow);
+	
 }
 
 .bubble::after {
